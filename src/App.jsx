@@ -1,6 +1,7 @@
 import FondoMagico from "./components/FondoMagico";
 import Portada from "./components/Portada";
 import Contador from "./components/Contador";
+import PadrinosFamilia from "./components/PadrinosFamilia"; // 1. Importas el componente aquí
 import MusicPlayer from "./components/MusicPlayer";
 import EventoCard from "./components/EventoCard";
 import ConfirmacionWhatsApp from "./components/ConfirmacionWhatsApp";
@@ -14,6 +15,10 @@ export default function App() {
         <div className="px-6 pt-12 text-center relative z-10">
           <Portada />
           <Contador />
+          
+          {/* 2. Colocas el componente debajo del Contador (la fecha) y arriba de la música */}
+          <PadrinosFamilia />
+
           <section className="my-14 relative z-10">
             <div className="w-2 h-2 border border-[#C5A059] rotate-45 mx-auto mb-6 opacity-70" />
             <p className="text-xs italic text-[#5C463F]/70 font-serif mb-5">Un momento especial para acompañar este día</p>
@@ -32,6 +37,7 @@ export default function App() {
               </a>
             </div>
           </section>
+
           <EventoCard
             imagen="/cruz-floral.png"
             imagenAlt="Cruz floral"
