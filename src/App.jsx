@@ -1,7 +1,9 @@
 import FondoMagico from "./components/FondoMagico";
+import FloresDoradas from "./components/FloresDoradas";
+
 import Portada from "./components/Portada";
 import Contador from "./components/Contador";
-import PadrinosFamilia from "./components/PadrinosFamilia"; // 1. Importas el componente aquí
+import PadrinosFamilia from "./components/PadrinosFamilia";
 import MusicPlayer from "./components/MusicPlayer";
 import EventoCard from "./components/EventoCard";
 import ConfirmacionWhatsApp from "./components/ConfirmacionWhatsApp";
@@ -9,19 +11,33 @@ import ConfirmacionWhatsApp from "./components/ConfirmacionWhatsApp";
 export default function App() {
   return (
     <main className="min-h-screen bg-[#FDF5F6] text-[#5C463F] font-sans relative flex justify-center">
+      
+      {/* Fondo decorativo */}
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none bg-[url('/fondo-brillos.jpg')] bg-cover bg-center" />
+
+      {/* Contenedor principal de la invitación */}
       <div className="w-full max-w-md bg-white/40 backdrop-blur-sm shadow-2xl relative z-10 pb-24 overflow-hidden">
+        
+        {/* Flores doradas laterales */}
         <FondoMagico />
+        <FloresDoradas />
+
+        {/* Contenido principal */}
         <div className="px-6 pt-12 text-center relative z-10">
+          
           <Portada />
           <Contador />
-          
-          {/* 2. Colocas el componente debajo del Contador (la fecha) y arriba de la música */}
+
           <PadrinosFamilia />
 
+          {/* Música */}
           <section className="my-14 relative z-10">
             <div className="w-2 h-2 border border-[#C5A059] rotate-45 mx-auto mb-6 opacity-70" />
-            <p className="text-xs italic text-[#5C463F]/70 font-serif mb-5">Un momento especial para acompañar este día</p>
+
+            <p className="text-xs italic text-[#5C463F]/70 font-serif mb-5">
+              Un momento especial para acompañar este día
+            </p>
+
             <div className="bg-white/90 rounded-2xl shadow-sm border border-[#C5A059]/40 p-3">
               <iframe
                 title="Canción en Spotify"
@@ -32,12 +48,19 @@ export default function App() {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
               />
-              <a className="mt-3 inline-block text-xs font-semibold text-[#168746]" href="https://open.spotify.com/search/Cazzu%20Inti" target="_blank" rel="noreferrer">
+
+              <a
+                className="mt-3 inline-block text-xs font-semibold text-[#168746]"
+                href="https://open.spotify.com/search/Cazzu%20Inti"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Abrir en Spotify ↗
               </a>
             </div>
           </section>
 
+          {/* Ceremonia religiosa */}
           <EventoCard
             imagen="/cruz-floral.png"
             imagenAlt="Cruz floral"
@@ -48,6 +71,8 @@ export default function App() {
             mapa="https://www.google.com/maps/search/?api=1&query=Santuario+San+Expedito+C+Bartolome+Mitre+2411"
             textoBoton="Ver ubicación"
           />
+
+          {/* Recepción */}
           <EventoCard
             imagen="/koala-brindis.png"
             imagenAlt="Koala de brindis"
@@ -58,9 +83,14 @@ export default function App() {
             mapa="https://www.google.com/maps/search/?api=1&query=Larguia+14+Villa+Celina"
             textoBoton="Cómo llegar"
           />
+
+          {/* Confirmación de asistencia */}
           <ConfirmacionWhatsApp />
+
         </div>
       </div>
+
+      {/* Reproductor de música flotante */}
       <MusicPlayer />
     </main>
   );

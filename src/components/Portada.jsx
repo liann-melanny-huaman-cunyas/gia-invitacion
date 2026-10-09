@@ -4,7 +4,7 @@ export default function Portada() {
       <h2 className="font-serif italic text-3xl mb-8 text-[#5C463F]/80 mt-4">Mi Bautizo</h2>
       <img src="/koala-rama.png" alt="Koala en una rama" className="w-48 mx-auto mb-6 relative drop-shadow-md" />
       <p className="text-sm italic mb-8 text-[#5C463F]/70 font-serif px-6">
-        “Que los ángeles te cuiden y Dios guíe siempre tus pasos.”
+        “Que los ángeles te cuiden y <br/> Dios guíe siempre tus pasos.”
       </p>
       <h1 className="font-serif text-5xl font-bold text-[#C5A059] leading-tight mb-4 drop-shadow-sm">
         GIA AVRIL<br />CHAVEZ
