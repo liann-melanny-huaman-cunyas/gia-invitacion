@@ -7,9 +7,8 @@ export default function AgregarCalendario() {
   const ubicacionEvento = "Santuario San Expedito, C. Bartolomé Mitre 2411";
   
   // Formato de fecha para Google Calendar: YYYYMMDDTHHmmssZ (Hora en UTC)
-  // Ejemplo: 2026-10-25 15:30 (Asegúrate de ajustar la zona horaria)
-  const fechaInicio = "20261025T183000Z"; 
-  const fechaFin = "20261025T230000Z";
+ const fechaInicio = "20261107T183000Z"; 
+  const fechaFin = "20261107T230000Z";
 
   const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(tituloEvento)}&dates=${fechaInicio}/${fechaFin}&details=${encodeURIComponent(detallesEvento)}&location=${encodeURIComponent(ubicacionEvento)}`;
 
