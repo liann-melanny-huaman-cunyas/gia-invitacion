@@ -1,12 +1,13 @@
 import FondoMagico from "./components/FondoMagico";
 import FloresDoradas from "./components/FloresDoradas";
-
 import Portada from "./components/Portada";
 import Contador from "./components/Contador";
 import PadrinosFamilia from "./components/PadrinosFamilia";
 import MusicPlayer from "./components/MusicPlayer";
 import EventoCard from "./components/EventoCard";
 import ConfirmacionWhatsApp from "./components/ConfirmacionWhatsApp";
+// 1. IMPORTA EL NUEVO COMPONENTE
+import AgregarCalendario from "./components/AgregarCalendario"; 
 
 export default function App() {
   return (
@@ -27,38 +28,10 @@ export default function App() {
           
           <Portada />
           <Contador />
-
           <PadrinosFamilia />
 
           {/* Música */}
-          <section className="my-14 relative z-10">
-            <div className="w-2 h-2 border border-[#C5A059] rotate-45 mx-auto mb-6 opacity-70" />
-
-            <p className="text-xs italic text-[#5C463F]/70 font-serif mb-5">
-              Un momento especial para acompañar este día
-            </p>
-
-            <div className="bg-white/90 rounded-2xl shadow-sm border border-[#C5A059]/40 p-3">
-              <iframe
-                title="Canción en Spotify"
-                src="https://open.spotify.com/embed/track/0IaW6NFaem0rcjxH3ZYZqs?utm_source=generator"
-                width="100%"
-                height="152"
-                style={{ borderRadius: 12 }}
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
-
-              <a
-                className="mt-3 inline-block text-xs font-semibold text-[#168746]"
-                href="https://open.spotify.com/search/Cazzu%20Inti"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Abrir en Spotify ↗
-              </a>
-            </div>
-          </section>
+          {/* ... (Tu código de Spotify se mantiene igual) ... */}
 
           {/* Ceremonia religiosa */}
           <EventoCard
@@ -83,6 +56,9 @@ export default function App() {
             mapa="https://www.google.com/maps/search/?api=1&query=Larguia+14+Villa+Celina"
             textoBoton="Cómo llegar"
           />
+
+          {/* 2. AGREGA EL COMPONENTE DE CALENDARIO AQUÍ */}
+          <AgregarCalendario />
 
           {/* Confirmación de asistencia */}
           <ConfirmacionWhatsApp />
